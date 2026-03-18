@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 12% 98%;
+    --foreground: 123 46% 12%;
+
+    --card: 40 12% 100%;
+    --card-foreground: 123 46% 12%;
+
+    --popover: 40 12% 100%;
+    --popover-foreground: 123 46% 12%;
+
+    --primary: 123 46% 34%;
+    --primary-foreground: 40 12% 98%;
+
+    --secondary: 29 29% 42%;
+    --secondary-foreground: 40 12% 98%;
+
+    --muted: 40 12% 94%;
+    --muted-foreground: 123 15% 40%;
+
+    --accent: 16 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 123 10% 90%;
+    --input: 123 10% 88%;
+    --ring: 123 46% 34%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 40 12% 97%;
+    --sidebar-foreground: 123 46% 12%;
+    --sidebar-primary: 123 46% 34%;
+    --sidebar-primary-foreground: 40 12% 98%;
+    --sidebar-accent: 40 12% 94%;
+    --sidebar-accent-foreground: 123 46% 12%;
+    --sidebar-border: 123 10% 90%;
+    --sidebar-ring: 123 46% 34%;
+
+    /* Custom tokens */
+    --forest-50: 123 30% 96%;
+    --forest-100: 123 30% 90%;
+    --forest-200: 123 30% 80%;
+    --forest-700: 123 46% 28%;
+    --forest-800: 123 46% 20%;
+    --forest-900: 123 46% 12%;
+
+    --earth-100: 29 25% 90%;
+    --earth-200: 29 25% 80%;
+    --earth-400: 29 29% 42%;
+
+    --stone-50: 40 12% 98%;
+    --stone-100: 40 12% 95%;
+    --stone-200: 40 10% 90%;
+    --stone-300: 40 8% 82%;
+
+    --sunset: 16 100% 60%;
+    --sunset-light: 16 100% 70%;
+    --sunset-dark: 16 100% 50%;
+
+    --shadow-card: 0 10px 15px -3px rgba(46, 125, 50, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    --shadow-elevated: 0 20px 25px -5px rgba(46, 125, 50, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Instrument Sans', sans-serif;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .label-caps {
+    @apply font-medium uppercase tracking-widest text-[10px];
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .plot-border {
+    @apply border border-border;
+  }
+}
